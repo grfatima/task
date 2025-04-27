@@ -1,5 +1,4 @@
 const box = document.querySelector("#box");
-const card = document.querySelector("#card");
 
 const endpoint = "https://jsonplaceholder.typicode.com/users";
 
@@ -12,6 +11,13 @@ fetch(endpoint, {
   .then((data) => {
     data.forEach((element) => {
       const { name, email, phone } = element;
-      console.log(name, email, phone);
+
+      box.innerHTML += `
+      <div class="card">
+        <h3>${name}</h3>
+        <p>Email: ${email}</p>
+        <p>Phone: ${phone}</p>
+      </div>
+    `;
     });
   });

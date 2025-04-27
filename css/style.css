@@ -3,15 +3,15 @@
   padding: 0;
 }
 
-.boxs div {
+.card {
   width: 20vh;
-  height: 20vh;
-  margin: 50px auto;
+  height: 15vh;
+  padding: 50px;
+  margin: 20px auto;
   border: 1px solid pink;
 }
 
 .boxs {
-  gap: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
